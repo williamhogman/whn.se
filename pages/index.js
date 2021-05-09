@@ -1,5 +1,4 @@
 import { NextSeo } from "next-seo";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { fetchFeed } from "../logic/feed";
 import Feed from "../components/Feed";
