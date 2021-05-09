@@ -46,24 +46,24 @@ function GithubRepos({ gh }) {
   );
 }
 
+const DESCRIPTION = `William is an european technologist passionate about the next big
+thing and the people building. Among William's interests is scaling
+engineering organizations and navigating trade offs of architecture
+and velocity. William's expertise lies in distributed systems,
+scalability and machine learning. In terms of particular technologies,
+William enjoys working with Kubernetes, Rust, nats, Kafka and neo4j.`;
+const NAME = "William Rudenmalm";
 export default function Home({ feed }) {
   return (
     <>
       <NextSeo
-        title="William Rudenmalm"
+        title={NAME}
         description="William Rudenmalm is an engineering leader based in Stockholm Sweden. On this website with links to all the things that William is doing including Rust, Kubernetes, data science and startups."
       />
       <div class={styles.hero}></div>
       <header class={styles.header}>
-        <h1>William Rudenmalm</h1>
-        <p>
-          William is an european technologist passionate about the next big
-          thing and the people building. Among William's interests is scaling
-          engineering organizations and navigating trade offs of architecture
-          and velocity. William's expertise lies in distributed systems,
-          scalability and machine learning. In terms of particular technologies
-          William enjoys working with Kubernetes, Rust, nats, Kafka and neo4j.
-        </p>
+        <h1>{NAME}</h1>
+        <p>{DESCRIPTION}</p>
         <Links links={LINKS} />
       </header>
       <Feed className={styles.feed} feed={feed} />
