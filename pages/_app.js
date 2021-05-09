@@ -1,7 +1,18 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import App from "next/app";
+import { DefaultSeo } from "next-seo";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+// import your default seo configurationn
+import SEO from "../seo";
+
+export default class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <>
+        <DefaultSeo {...SEO} />
+        <Component {...pageProps} />
+      </>
+    );
+  }
 }
-
-export default MyApp
