@@ -26,7 +26,8 @@ const LINKS = [
   { href: "tel:+46702638633", name: "+46702638633" },
   { href: "mailto:me@whn.se", name: "me@whn.se" },
   { href: "https://twitter.com/w_hgm", name: "@w_hgm" },
-  { href: "https://linkedin.com/in/whnse", name: "LinkedIn" },
+    { href: "https://linkedin.com/in/whnse", name: "LinkedIn" },
+    { href: "https://blog.whn.se/", name: "Blog"},
 ];
 
 function GithubRepos({ gh }) {
