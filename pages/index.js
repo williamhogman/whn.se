@@ -5,7 +5,8 @@ import Feed from "../components/Feed";
 
 export async function getStaticProps(context) {
   return {
-    props: { feed: await fetchFeed() },
+      props: { feed: await fetchFeed() },
+      revalidate: 1800,
   };
 }
 
