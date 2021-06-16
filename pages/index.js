@@ -5,8 +5,8 @@ import Feed from "../components/Feed";
 
 export async function getStaticProps(context) {
   return {
-      props: { feed: await fetchFeed() },
-      revalidate: 1800,
+    props: { feed: await fetchFeed() },
+    revalidate: 1800,
   };
 }
 
@@ -27,8 +27,8 @@ const LINKS = [
   { href: "tel:+46702638633", name: "+46702638633" },
   { href: "mailto:me@whn.se", name: "me@whn.se" },
   { href: "https://twitter.com/w_hgm", name: "@w_hgm" },
-    { href: "https://linkedin.com/in/whnse", name: "LinkedIn" },
-    { href: "https://blog.whn.se/", name: "Blog"},
+  { href: "https://linkedin.com/in/whnse", name: "LinkedIn" },
+  { href: "https://blog.whn.se/", name: "Blog" },
 ];
 
 function GithubRepos({ gh }) {
@@ -61,7 +61,6 @@ export default function Home({ feed }) {
         title={NAME}
         description="William Rudenmalm is an engineering leader based in Stockholm Sweden. On this website with links to all the things that William is doing including Rust, Kubernetes, data science and startups."
       />
-      <div class={styles.hero}></div>
       <header class={styles.header}>
         <h1>{NAME}</h1>
         <p>{DESCRIPTION}</p>
