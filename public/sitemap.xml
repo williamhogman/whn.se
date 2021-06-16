@@ -4,4 +4,8 @@
     <loc>https://whn.se/</loc>
     <changefreq>daily</changefreq>
   </url>
+  <url>
+    <loc>https://blog.whn.se</loc>
+    <changefreq>daily</changefreq>
+  </url>
 </urlset>
