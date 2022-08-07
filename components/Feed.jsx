@@ -1,4 +1,5 @@
-import styles from "./Feed.module.css"
+/** @jsx h */
+import { h } from "preact";
 
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -49,9 +50,9 @@ function formatTime(date) {
     return rtf.format(Math.round(scaleTime(date - now)), getTimeUnit(date - now))
 }
 
-export default function Feed({ feed, className }) {
+export default function Feed(props) {
     
-    const f = feed.map(({ title, description, href, date }) => (
+    const f = (props.feed ?? []).map(({ title, description, href, date }) => (
         <a href={href} key={title}>
                 <p>{title}</p>
                 <p>{description}</p>
@@ -59,7 +60,7 @@ export default function Feed({ feed, className }) {
         </a>
     ))
     return (
-        <div class={className +  " " + styles.feed}>
+        <div class={props.class +  " feed"}>
             {f}
         </div>
     )
