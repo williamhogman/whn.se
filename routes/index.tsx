@@ -1,5 +1,6 @@
 import { asset } from "$fresh/runtime.ts";
 import Feed from "../components/Feed.jsx";
+import { Fragment } from "preact"
 const DESCRIPTION = `William is an european technologist passionate about the next big
 thing and the people building. Among William's interests is scaling
 engineering organizations and navigating trade offs of architecture
