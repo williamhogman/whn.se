@@ -1,6 +1,4 @@
-/** @jsx h */
 import { asset } from "$fresh/runtime.ts";
-import { Fragment, h } from "preact";
 import Feed from "../components/Feed.jsx";
 const DESCRIPTION = `William is an european technologist passionate about the next big
 thing and the people building. Among William's interests is scaling

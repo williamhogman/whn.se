@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
-
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
     numeric: "auto", // other values: "auto"
