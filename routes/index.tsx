@@ -50,6 +50,7 @@ function Metas() {
       <title>William Rudenmalm - whn.se - William Rudenmalm's webpage</title>
       <meta name="robots" content="index,follow" />
       <meta name="googlebot" content="index,follow" />
+      <link rel="icon" href="favicon.svg" />
       <meta name="description" content={META_DESCRIPTION} />
     </Fragment>
   );
