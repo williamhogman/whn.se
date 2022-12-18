@@ -1,8 +1,8 @@
 import { asset } from "$fresh/runtime.ts";
+import { Fragment } from "preact";
 import Feed from "../components/Feed.jsx";
-import { Fragment } from "preact"
 const DESCRIPTION = `William is an european technologist passionate about the next big
-thing and the people building. Among William's interests is scaling
+thing and the people building it. Among William's interests is scaling
 engineering organizations and navigating trade offs of architecture
 and velocity. William's expertise lies in distributed systems,
 scalability and machine learning. In terms of particular technologies,
@@ -56,6 +56,14 @@ function Metas() {
   );
 }
 
+function WorkWithMe() {
+  return (
+    <a href="https://sobel.io">
+      William is ocassionally avaliable for consulting through Sobel.IO
+    </a>
+  );
+}
+
 const META_DESCRIPTION =
   "William Rudenmalm is an engineering leader based in Stockholm Sweden. On this website with links to all the things that William is doing including Rust, Kubernetes, data science and startups.";
 export default function Home({ feed }) {
@@ -67,7 +75,9 @@ export default function Home({ feed }) {
       <div class="page">
         <header class="header">
           <h1>{NAME}</h1>
-          <p>{DESCRIPTION}</p>
+          <p>
+            {DESCRIPTION} <WorkWithMe />
+          </p>
           <Links links={LINKS} />
         </header>
         {feed != null ? <Feed feed={feed} /> : null}
