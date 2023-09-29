@@ -85,3 +85,7 @@ export default function Home({ feed }) {
     </Fragment>
   );
 }
+
+export function handler(req: Request): Response {
+  return Response.redirect("https://sobel.io/staff/whn", 307);
+}
